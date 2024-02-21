@@ -9,6 +9,7 @@ class App extends Component {
       <div>
         <LifeCycle color={this.state.color}/>
         <button onClick={() => this.setState({color:'blue'})}>blue</button>
+        <button onClick={() => this.setState({color:'green'})}>green</button>
       </div>
     );
   }
