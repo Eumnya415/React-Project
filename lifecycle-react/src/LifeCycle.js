@@ -4,6 +4,15 @@ class LifeCycle extends Component {
     state = {
         color:null
     }
+    constructor(props){
+        super(props);
+        console.log('constructor');
+    }
+
+    componentDidMount(){
+        console.log('componentDidMount');
+    }
+    
     // 마운트 과정에서도 호출되고, 업데이트가 시작하기 전에도 호출되는 메서드
     static getDerivedStateFromProps(nextProps, prevState){
         console.log('getDerivedStateFromProps',nextProps,prevState);
