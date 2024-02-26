@@ -12,6 +12,7 @@ const Home = () => {
                 <li><Link to="/profiles/user2">user2 프로필</Link></li>
                 <li><Link to="/profiles/user3">user3 프로필</Link></li>
             </ul>
+            <Link to="/articles">게시글 목록</Link>
         </div>
     );
 };
