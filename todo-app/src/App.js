@@ -19,13 +19,13 @@ const App = () => {
     const nextTodo = {id:nextId.current,text:text,checked:false};
     setTodos(todos.concat(nextTodo));
     nextId.current = nextId.current + 1; // id 4 -> 5
-    },[todos]);
+    },[]);
 
     // TodoListItem remove button click -> id
     const onRemove = useCallback(
       (id) => {
         setTodos(todos.filter(todo => todo.id !== id));
-      },[todos]
+      },[]
     );
 
     const onToggle = useCallback(
@@ -33,7 +33,8 @@ const App = () => {
       setTodos(todos.map(
         todo => todo.id == id ? {...todo,checked:!todo.checked} : todo)
         );
-    });
+    },[]
+    );
 
   return (
       <TodoTemplate>
