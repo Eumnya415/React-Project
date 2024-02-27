@@ -1,9 +1,15 @@
 import React from 'react';
+import { Route,Routes } from '../node_modules/react-router-dom/dist/index';
 import Layout from './components/Layout';
+import Home from './components/Home';
 
 const App = () => {
   return (
-    <Layout />
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path='/' element={<Home/>} />
+      </Route>
+    </Routes>
   );
 };
 
